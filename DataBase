@@ -1,0 +1,32 @@
+
+
+Create proc usp_AddEmployee(@Name varchar(50),@Age int,@Active int)
+As
+Begin
+insert into TestEmployee(Name,Age,Active)
+Values(@Name,@Age,@Active);
+end
+
+create proc usp_GetAllEmployees
+As
+Begin
+  select * from TestEmployee;
+END
+
+create proc usp_GetEmployeeByID(@Id Int)
+As
+Begin
+  select * from TestEmployee where ID=@Id;
+END
+
+Create proc usp_UpdateEmployee(@Id int,@Name Varchar(50),@Age int,@Active int)
+As
+Begin
+Update TestEmployee SET Name=@Name,Age=@Age,@Active=@Active where ID=@Id;
+End
+
+create proc usp_DeleteEmployee(@Id Int)
+As
+Begin
+  Delete from TestEmployee where ID=@Id;
+END
