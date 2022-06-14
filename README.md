@@ -1,0 +1,2 @@
+# Asp.netCoreWebAPIAdo.net
+webapi
